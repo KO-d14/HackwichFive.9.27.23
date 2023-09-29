@@ -8,17 +8,48 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="NfH-iq-XaB">
             <objects>
-                <viewController id="oso-Tj-4mI" sceneMemberID="viewController">
+                <viewController id="oso-Tj-4mI" customClass="secondViewController" customModule="HackwichFive_9_27_23" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NT0-dk-yJq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Favorite Show/Movies" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JU1-2U-asW">
+                                <rect key="frame" x="136" y="88" width="142" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9E-cG-Xr2">
+                                <rect key="frame" x="136" y="202" width="142" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwY-pR-I24">
+                                <rect key="frame" x="136" y="638" width="167" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="My Favorite Show/Movies"/>
+                                <connections>
+                                    <action selector="buttonPressedVC2:" destination="oso-Tj-4mI" eventType="touchUpInside" id="mWJ-3e-ngm"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XIZ-Bf-9mC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="a7a-qk-zBK"/>
+                    <connections>
+                        <outlet property="bottomLabelVC2" destination="a9E-cG-Xr2" id="yZc-th-qpA"/>
+                        <outlet property="topLabelVC2" destination="JU1-2U-asW" id="Z0S-v6-8Fi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzZ-Y9-9Pw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,7 +132,7 @@
         <scene sceneID="vYl-yp-A13">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OlM-sd-OoR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" image="octagon.fill" catalog="system" id="DXr-AH-Vs5"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" image="suit.heart.fill" catalog="system" id="DXr-AH-Vs5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fsR-nR-lRj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -120,7 +151,7 @@
         <scene sceneID="fE9-9g-k27">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mpM-bS-yCq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="mff-EJ-1R1"/>
+                    <tabBarItem key="tabBarItem" title="Item 2" image="sparkle" catalog="system" id="mff-EJ-1R1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WBY-yt-kIW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -137,12 +168,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="octagon.fill" catalog="system" width="128" height="112"/>
+        <image name="sparkle" catalog="system" width="128" height="121"/>
+        <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
