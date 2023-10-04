@@ -17,7 +17,7 @@ Record your simulator and submit the link to your recording via Laulima for this
 class secondViewController: UIViewController {
 
 //PART 5
-// ??? Unsure if we still need to repeat part 5-#1: declare & assign currentIndex to 0
+// ??? Unsure if we still need to repeat part 5-#1: declare & assign currentIndex to 0; I wrote the code just in case 
     var currentIndex = 0
     var favoriteShowsMoviesArray = ["Kiki's Delivery Service", "Courage the Cowardly Dog", "Deadpool", "Unwrapped", "The British Baking Show"]
 //PART 3
