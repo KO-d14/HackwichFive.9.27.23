@@ -47,4 +47,5 @@ class secondViewController: UIViewController {
     {
         self.bottomLabelVC2.text = favoriteShowsMoviesArray[2]
     }
+//COMPLETED ALL ASSIGNMENTS - submitted video recording of my code results in laulima and uploaded in google drive
 }
