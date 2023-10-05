@@ -103,6 +103,7 @@
                     <navigationItem key="navigationItem" id="yaa-xE-OiM"/>
                     <connections>
                         <outlet property="bottomLabel" destination="35s-Kn-0iF" id="1LP-pt-Ugk"/>
+                        <outlet property="buttonLabel" destination="4rM-LM-wII" id="GZH-T5-ct0"/>
                         <outlet property="topLabel" destination="WE2-hv-dE5" id="MEW-iw-Sc4"/>
                     </connections>
                 </viewController>
