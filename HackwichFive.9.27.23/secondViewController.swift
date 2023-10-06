@@ -25,10 +25,13 @@ class secondViewController: UIViewController {
     
     @IBOutlet weak var bottomLabelVC2: UILabel!
     
+    @IBOutlet weak var buttonLabelVC2: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        topLabelVC2.text = "🎥 My Favorite Shows/Movies"
     }
     
 
@@ -42,10 +45,27 @@ class secondViewController: UIViewController {
     }
     */
 
-    
+//WEEK 7, Problem Set #2: Please repeat Part 1 for your Tab #2 (6 points)
     @IBAction func buttonPressedVC2(_ sender: Any)
     {
-        self.bottomLabelVC2.text = favoriteShowsMoviesArray[2]
-    }
+//Problem set tab #2, #2. You will create an array that contains your 5 favorite shows or movies and display the third item in your array.
+       //COMMENTING OUT BC THIS IS FROM HACKWICH 5- WORKING WITH ARRAYS  self.bottomLabelVC2.text = favoriteShowsMoviesArray[2]
+//WEEK 7 PROBLEM SET #2
+        if currentIndex < favoriteShowsMoviesArray.count 
+        {
+            self.bottomLabelVC2.text = favoriteShowsMoviesArray[currentIndex]
+            
+            buttonLabelVC2.setTitle("Next", for: UIControl.State.normal)
+            
+            currentIndex += 1 
+        } //closing bracket for if
+        else
+        {
+            print("button has been disabled")
+            
+            (buttonLabelVC2!).isEnabled = false 
+        } //closing bracket for else
+    } //closing bracket for IBAction func buttonPressedVC2
+    
 //COMPLETED ALL ASSIGNMENTS - submitted video recording of my code results in laulima and uploaded in google drive
 }
